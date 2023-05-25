@@ -14,7 +14,7 @@
         <div class="container-fluid" style="font-size: 40px;">
           <span class="navbar-brand mb-0 h1" style="color: white;">Note Taker</span>
           <i class="fa fa-plus" style="border: none; float: right; font-size: 40px; color: white; margin-top: 10px; margin-right: 25px;"></i>
-          <button type="button" class="btn btn-default btn-lg " style="border: none; float: right; font-size: 35px; color: white;  margin-right: 25px; display: none;">
+          <button type="button" id="saved-button" class="btn btn-default btn-lg " style="border: none; float: right; font-size: 35px; color: white;  margin-right: 25px; display: none;">
             <span class="glyphicon glyphicon-floppy-disk" ></span>
           </button>
         </div>
@@ -22,14 +22,15 @@
 
       <main>
         <aside style="float: left; width: 19%; border-right: double; height: 1300px;">
-            <p>This is a where saved notes will be stored</p>
+            <p></p>
         </aside>
-            <input type="text" id="title" style="width: 80%; margin: auto; float: right; font-size: 35px; font-style: bold; border: none; margin-bottom: 20px;" placeholder="Note Title........">
-            <textarea type="textarea" id="description" style="width: 80%;  margin: auto; float: right; height: 1200px; border: none; font-size: 20px" placeholder="Note Text......"></textarea>
+            <input type="text" id="title" style="width: 80%; margin: auto; float: right; font-size: 35px; font-style: bold; border: none; margin-bottom: 20px; outline: none;" placeholder="Note Title........">
+            <textarea type="textarea" id="description" style="width: 80%;  margin: auto; float: right; height: 1200px; border: none; font-size: 20px; outline: none; resize:none;" placeholder="Note Text......"></textarea>
       </main>
      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script type="text/javascript"src="./js/app.js"></script>
     </body>
 </html>

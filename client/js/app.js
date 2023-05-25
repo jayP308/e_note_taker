@@ -10,7 +10,8 @@ savedButton.addEventListener('click', () => {
     const titleValue = title.value.trim();
     const descriptionValue = description.value.trim();
 
-    if(titleValue == '') {
-        alert('Both Fields Cannot Be Blank! Please Write a title before saving')
-    }
+    if(!titleValue) {
+        alert('Please Write a title before saving');
+    } 
+    
 })

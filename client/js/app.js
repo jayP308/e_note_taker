@@ -1,17 +1,33 @@
-const title = document.getElementById('title');
-const description = document.getElementById('description');
+const title1 = document.getElementById('title');
+const description1 = document.getElementById('description');
 const savedButton = document.getElementById('saved-button');
 
 title.addEventListener('keyup', () => {
     document.getElementById('saved-button').style.display = 'inline-block';
 });
 
-savedButton.addEventListener('click', () => {
-    const titleValue = title.value.trim();
-    const descriptionValue = description.value.trim();
+const notesSave = async (event) => {
+    event.preventDefault();
 
-    if(!titleValue) {
-        alert('Please Write a title before saving');
-    } 
-    
-})
+    const title = title1.value.trim();
+    const description = description1.value.trim();
+
+    const response = await fetch('/api/notes', {
+            method: 'POST',
+            body: JSON.stringify({ title, description }),
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+
+        if(!title) {
+            alert('Please Write a title before saving');
+        } 
+
+        if(response.ok){
+            document.location.replace('/');
+        } else {
+            return;
+        }
+}
+
+savedButton.addEventListener('click', notesSave);

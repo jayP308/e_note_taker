@@ -5,4 +5,158 @@
 
 body {
     width: 100%;
+    height: auto;
 }
+
+main {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.add-button {
+    border: none; 
+    float: right; 
+    font-size: 40px; 
+    color: white; 
+    margin-top: 10px; 
+    margin-right: 25px;
+}
+
+#saved-button {
+    display: none;
+    border: none; 
+    float: right; 
+    font-size: 35px; 
+    color: white;  
+    margin-right: 25px; 
+}
+
+#saved-button:hover {
+    cursor: pointer;
+    color: rgb(30, 8, 153);
+}
+
+#plus-button {
+    border: none; 
+    float: right; 
+    font-size: 40px; 
+    color: rgb(255, 255, 255); 
+    margin-top: 10px; 
+    margin-right: 25px; 
+}
+
+#plus-button:hover {
+    cursor: pointer;
+    color: rgb(30, 8, 153); 
+}
+
+#notes-container {
+    float: left;
+    width: 20%; 
+    height: 2000px;
+    max-height: 2000px;
+    border-right: solid;
+    border-color: rgb(11, 186, 230);
+    border-width: 1px;
+}
+
+#title {
+    display: none; 
+    width: 75%; 
+    margin: auto; 
+    float: right; 
+    font-size: 40px; 
+    font-style: bold; 
+    border: none; 
+    margin-bottom: 20px; 
+    outline: none;
+    resize:none;
+    font-family: monospace;
+}
+
+#description {
+    display: none; 
+    width: 75%;  
+    margin: auto; 
+    float: right; 
+    height: 1200px; 
+    border: none; 
+    font-size: 20px; 
+    outline: none; 
+    resize:none;
+    font-family: monospace;
+}
+
+#title1 {
+    display: block; 
+    width: 75%; 
+    margin: auto; 
+    float: right; 
+    font-size: 40px; 
+    font-style: bold;
+    border: none; 
+    margin-bottom: 20px; 
+    outline: none;
+    resize:none;
+    font-family: monospace;
+}
+
+#description1 {
+    display: block; 
+    width: 75%;  
+    margin: auto; 
+    float: right; 
+    height: 1200px; 
+    border: none; 
+    font-size: 20px; 
+    outline: none; 
+    resize:none;
+    font-family: monospace;
+}
+
+#date1 {
+    display: block; 
+    width: 75%; 
+    margin: auto; 
+    float: right; 
+    font-size: 15px; 
+    font-style: bold;
+    border: none; 
+    margin-bottom: 40px; 
+    outline: none;
+    resize:none;
+    font-family: monospace;
+}
+
+.card-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-color: rgb(11, 186, 230);
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-family: monospace;
+  }
+  
+  .card-note:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(23, 147, 196), white);
+  }
+  
+  .note-title {
+    font-size: 20px;
+  }
+  
+  .delete-button {
+    font-size: 20px;
+    border: none;
+    float: right; /* Align the buttons to the right */
+    color: blue;
+    background-color: transparent;
+  }
+  
+  .delete-button:hover {
+    background-color: red;
+  }

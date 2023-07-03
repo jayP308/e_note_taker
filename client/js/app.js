@@ -7,7 +7,11 @@ const plusButton = document.querySelector('.fa-plus');
 const savedButton = document.getElementById('saved-button');
 const addButton = document.getElementById('plus-button');
 const date2 = document.getElementById('date1');
+const notesContainer = document.getElementById('title-card');
 
+// Keyup function that makes the save button appear if the input fields 
+// are not empty and save button will dissappear if note title input
+// field are empty.
 title1.addEventListener('keyup', () => {
     const titleValue = title1.value.trim();
     const descriptionValue = description1.value.trim();
@@ -19,6 +23,7 @@ title1.addEventListener('keyup', () => {
     }
   });
 
+// POST request to save data to db.json
 const notesSave = async (event) => {
     event.preventDefault();
 
@@ -43,8 +48,7 @@ const notesSave = async (event) => {
         }
 }
 
-const notesContainer = document.getElementById('title-card');
-
+// GET request to display all data from db.json
 const fetchNotes = async () => {
   try {
     const response = await fetch('/api/notes/fetch', {
@@ -118,6 +122,7 @@ const fetchNotes = async () => {
   }
 };
 
+// DELETE function 
 const deleteNote = async (noteId) => {
     try {
       const confirmDelete = confirm('Are you sure you want to delete this note?');
@@ -138,6 +143,8 @@ const deleteNote = async (noteId) => {
       console.error('Error deleting note:', err);
     }
   };
+
+// Add Notes button that hides certain blocks
 addButton.addEventListener('click', () => {
     title2.style.display = 'none';
     description2.style.display = 'none';
@@ -147,6 +154,7 @@ addButton.addEventListener('click', () => {
     description1.style.display = 'block';
 })
 
+// Event listeners for POST and GET request
 savedButton.addEventListener('click', notesSave);
 plusButton.addEventListener('click', fetchNotes);
 

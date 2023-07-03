@@ -53,6 +53,7 @@ router.get('/fetch', async (req, res) => {
     });
   });
 
+// Router to delete each one of the notes individually
 router.delete('/delete/:id', async (req, res) => {
     const noteId = req.params.id;
   
@@ -90,6 +91,7 @@ router.delete('/delete/:id', async (req, res) => {
     });
   });
 
+// Generates unique id for each notes being created
 function generateUniqueId() {
     // Generate a random string using current timestamp and a random number
     const timestamp = Date.now().toString();
